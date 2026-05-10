@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Button from "@/components/Button";
 
 const MAPS_URL =
@@ -7,11 +8,13 @@ export default function Home() {
   return (
     <>
       <section className="flex flex-col md:flex-row min-h-[88vh]">
-        <div className="md:w-1/2 h-72 md:h-auto">
-          <img
+        <div className="md:w-1/2 h-72 md:h-auto relative">
+          <Image
             src="/images/matt_spinning_beca.avif"
             alt="Rebeca and Matthew"
-            className="w-full h-full object-cover"
+            fill
+            className="object-cover"
+            priority
           />
         </div>
         <div className="md:w-1/2 bg-sage-200 flex flex-col justify-center px-12 md:px-20 py-16">
@@ -37,9 +40,11 @@ export default function Home() {
               Ceremony
             </h2>
             <div className="flex justify-center my-8">
-              <img
+              <Image
                 src="/images/ceremony_couple.svg"
                 alt=""
+                width={192}
+                height={271}
                 className="w-48 h-auto"
               />
             </div>
@@ -62,9 +67,11 @@ export default function Home() {
               Reception
             </h2>
             <div className="flex justify-center my-8">
-              <img
+              <Image
                 src="/images/reception_cake.svg"
                 alt=""
+                width={192}
+                height={240}
                 className="w-48 h-auto"
               />
             </div>
