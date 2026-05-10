@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@theme {
+  /* Color palette extracted from Wix site */
+  --color-sage-50: #F7F9F2;
+  --color-sage-100: #E8ECD7;
+  --color-sage-200: #C8D0A5;
+  --color-sage-300: #75936D;
+  --color-sage-400: #718755;
+  --color-olive-700: #4E5926;
+  --color-olive-800: #3A582E;
+  --color-teal-700: #4A625A;
+}
+
+@layer base {
+  :root {
+    --font-heading: var(--font-caudex), Georgia, serif;
+    --font-body: var(--font-dm-sans), system-ui, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: #F7F9F2;
+    color: #4E5926;
+  }
+}
+
+@layer utilities {
+  .font-heading {
+    font-family: var(--font-heading);
+  }
+  .font-body {
+    font-family: var(--font-body);
+  }
+  .font-script {
+    font-family: var(--font-script), cursive;
+  }
+}
